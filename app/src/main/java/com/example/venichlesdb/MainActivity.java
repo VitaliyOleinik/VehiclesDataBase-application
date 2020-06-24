@@ -42,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
         car.setName("Tesla");
         car.setPrice("250 000 $");
         dataBaseHandler.updateCar(car);
+        int updatedCarID = dataBaseHandler.updateCar(car);
         Log.d("Car Info", "ID: " + car.getId() + ", Name: " + car.getName() +
-                ", Price: " + car.getPrice());
+                ", Price: " + car.getPrice() + ", ID of updated car: " + updatedCarID);
+
     }
 }
