@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         DataBaseHandler dataBaseHandler = new DataBaseHandler(this);
 
+        Log.d("Cars count:", String.valueOf(dataBaseHandler.getCarsCount()));
+
 //        dataBaseHandler.addCar(new Car("Toyota","30 000 $"));
 //        dataBaseHandler.addCar(new Car("Mercedes","50 000 $"));
 //        dataBaseHandler.addCar(new Car("RollsRays","1 000 000 $"));
@@ -30,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
 //        dataBaseHandler.addCar(new Car("Hyundai","30 000 $"));
 
         List<Car> carList = dataBaseHandler.getAllCars();
-        Car carManipulation = dataBaseHandler.getCar(7);
-        dataBaseHandler.deleteCar(carManipulation);
+        /*Car carManipulation = dataBaseHandler.getCar(7);
+        dataBaseHandler.deleteCar(carManipulation);*/
         for(Car car : carList){
             Log.d("Car Info", "ID: " + car.getId() + ", Name: " + car.getName() +
                     ", Price: " + car.getPrice());
